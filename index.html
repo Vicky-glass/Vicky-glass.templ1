@@ -5,16 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="../style.css" type="text/css" media="screen">
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>  
-	<script type="text/javascript">
-	 function get_maps() {
-	$(window).on('load', function () {
-    var $preloader = $('#p_prldr'),
-        $txt_anm   = $preloader.find('.txt_anm');
-    $txt_anm.fadeOut();
-    $preloader.delay(500).fadeOut('slow');
-	})
-	};
-</script>
+
 <script>
 function show(shown, hidden) {
   document.getElementById(shown).style.display='block';
@@ -22,6 +13,19 @@ function show(shown, hidden) {
    return false;
 }
 </script>
+
+		<script type="text/javascript">
+	$(function () {
+	$('.maps').click( function () {
+    var $preloader = $('#p_prldr'),
+        $txt_anm   = $preloader.find('.txt_anm');
+    $txt_anm.fadeOut('slow');
+    $preloader.delay(500).fadeOut('slow');
+	});
+	});
+
+</script>
+
 <script language="JavaScript">
 		<!--//
 		var startday = new Date();
@@ -49,7 +53,7 @@ function show(shown, hidden) {
 		</script>
 </head>
 <body onLoad = "window.setTimeout('getSecs()',1)">
- <nav class="nav-menu">
+ <div class="nav-menu">
   <div id="Page1" >
   <!-- Content of page 1 -->
     <nav class="content">
@@ -90,7 +94,7 @@ function show(shown, hidden) {
 	<nav class="menu">
 		<ul>
 			 <li><a href="#" >Резюме </a></li>  <!--PAGE1 -->
-			<li><a href="#" onclick="get_maps();return show('Page2','Page1');">Карта</a></li>  <!--page 2 -->
+			<li><a class="maps" href="#" onclick="return show('Page2','Page1');">Карта</a></li>  <!--page 2 -->
 			<li><a href="#" onclick="return show('Page3','Page1');">Таймер</a></li>  <!--page 3 -->
 		</ul>	
 	</nav>	
@@ -98,6 +102,7 @@ function show(shown, hidden) {
 
   <div id="Page2" style="display:none" >
     <!-- Content of page 2 -->
+
 	
 	<style>
 			#my_maps {
@@ -111,7 +116,7 @@ function show(shown, hidden) {
 			}
 			
 			#p_prldr{
-			/*position: fixed;*/
+			position: fixed;
 			left: 0;
 			top: 0;
 			right:0;
@@ -142,7 +147,8 @@ function show(shown, hidden) {
 			background-size:41px;    
 			margin: -16px 0 0 -16px;}
 		</style>
-	
+		
+
 		<div id="p_prldr">
 			<div class="contpre">
 				<span class="txt_anm"></span><br>
@@ -174,12 +180,13 @@ function show(shown, hidden) {
 	<nav class="menu">	
 		<ul>
 			<li><a href="#" onclick="return show('Page1','Page2');">Резюме</a></li>  <!--  page 1 -->
-			<li><a href="#" >Карта</a></li>  <!--  PAGE2  -->
+			<li><a class="maps" href="#" >Карта</a></li>  <!--  PAGE2  -->
 			<li><a href="#" onclick="return show('Page3','Page2');">Таймер</a></li> <!--  page 3  -->
 		</ul>	
 	</nav>
   </div>
   
+ 
   <div id="Page3" style="display:none">
     <!-- Content of page 2 -->
 	
@@ -220,11 +227,11 @@ function show(shown, hidden) {
 		<nav class="menu">
 			<ul>
 				<li><a href="#" onclick="return show('Page1','Page3');">Резюме</a></li> <!--  page 1 -->
-				<li><a href="#" onclick="return show('Page2','Page3');">Карта</a></li> <!--   page 2 -->
+				<li><a class="maps" href="#" onclick="return show('Page2','Page3');">Карта</a></li> <!--   page 2 -->
 				<li><a href="#" >Таймер</a></li>  <!--    PAGE3 -->
 			</ul>	
 		</nav>
   </div>
-  </nav>
+  </div>
  </body>
 </html>
