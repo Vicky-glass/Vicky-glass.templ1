@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ru">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="../style.css" type="text/css" media="screen">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>  
+	<script type="text/javascript">
+	 function get_maps() {
+	$(window).on('load', function () {
+    var $preloader = $('#p_prldr'),
+        $txt_anm   = $preloader.find('.txt_anm');
+    $txt_anm.fadeOut();
+    $preloader.delay(500).fadeOut('slow');
+	})
+	};
+</script>
+<script>
+function show(shown, hidden) {
+  document.getElementById(shown).style.display='block';
+  document.getElementById(hidden).style.display='none';
+   return false;
+}
+</script>
+<script language="JavaScript">
+		<!--//
+		var startday = new Date();
+		var clockStart = startday.getTime();
+
+		function initStopwatch() { 
+		var myTime = new Date();         
+		var timeNow = myTime.getTime();          
+		var timeDiff = timeNow - clockStart;         
+		this.diffSecs = timeDiff/1000;         
+		return(this.diffSecs); } 
+
+		function getSecs() {        
+		var mySecs = initStopwatch(); 
+		var myHours = Math.floor(mySecs / 3600);
+		var mySecHours = mySecs - myHours * 3600;
+		var myMin = Math.floor(mySecHours / 60);
+		var mySecMin= Math.round(mySecHours - myMin*60);
+			if (myHours < 10) myHours = "0" + myHours;
+			if (myMin < 10) myMin = "0" + myMin;
+			if (mySecMin < 10) mySecMin = "0" + mySecMin;
+		document.getElementById("is_times").innerHTML=myHours + ":" + myMin + ":" + mySecMin;
+		window.setTimeout('getSecs()',1000); }
+		// -->
+		</script>
+</head>
+<body onLoad = "window.setTimeout('getSecs()',1)">
+ <nav class="nav-menu">
+  <div id="Page1" >
+  <!-- Content of page 1 -->
+    <nav class="content">
+		<h2> Белозерова Виктория Михайловна</h2>
+		<h3>Личная информация:</h3>
+		<p>Дата рождения: 14.12.1991г.<br>
+		Адрес проживания: г. Дубна, ул.Тверская д.8, кв. 23<br>
+		Семейное положение: замужем, ребенок 3 года</p>
+		<h3>Контактные данные:</h3>
+		<p>Мобильный телефон: +7(916)9522956<br>
+		E-mail: vicky.belozerova@gmail.com</p>
+		<h3>Образование:</h3>
+		<p><b>2009-2012</b> Балтийский федеральный университет им. И.Канта, факультет: математический, специальность: Прикладная математика и информатика</p>
+		<p><b>2012-2014</b> Государственное бюджетное образовательное учреждение высшего профессионального образования Московской области, Международный Университет природы, общества и человека "Дубна", Институт системного анализа и управления, факультет: Распределенных информационно-вычислительных систем, направление: Программное обеспечение вычислительной техники и автоматизированных систем.</p>
+		<p><b>Высшее техническое образование :</b>инженер по специальности "Программное обеспечение вычислительной техники и автоматизированных систем"</p> 
+		<h3>Опыт работы:</h3>
+		<p><b>2013 - 2014 гг.:</b> Университет «Дубна», Отдел обеспечения работы компьютерных кабинетов<br>
+		<b>Должность:</b> техник.<br>
+		<b>Обязанности:</b> разработка и модерация учебного плана, обеспечение корректной работы учебного процесса.</p>
+		<p><b>2014 - 2017гг.:</b> Университет «Дубна», Отдел обеспечения работы компьютерных кабинетов<br>
+		<b>Должность:</b> инженер.<br>
+		<b>Обязанности:</b> разработка и модерация учебного плана, обеспечение корректной работы учебного процесса, внедрение и апробация системы «1С:Университет»  в  учебный процесс.
+		</p>
+		<h3>Профессиональные навыки и умения:</h3>
+		<ul><li>Свободное владение ПК</li>
+			<li>Хорошие знания HTML, CSS, MySQL</li>
+			<li>Основы работы с Photoshop, Bootstrap, системой 1С-Битрикс</li>
+			<li>Базовые знания  PHP</li>
+			<li>Имею представление о jquery, javascript</li>
+			<li>Знание немецкого языка, английского языка на уровне, достаточном для работы с зарубежными ресурсами</li>
+			<li>Основы работы в системах 1С</li>
+			<li>Основы работы в программах Autodesk 3D-max, SolidWorks, LabVIEW</li>
+		</ul>
+		<h3>Дополнительная информация – личные качества:</h3>
+		<p>Коммуникабельность, исполнительность, ответственность, инициативность,постоянное повышение профессионального уровня.</p>
+
+	</nav>
+	<nav class="menu">
+		<ul>
+			 <li><a href="#" >Резюме </a></li>  <!--PAGE1 -->
+			<li><a href="#" onclick="get_maps();return show('Page2','Page1');">Карта</a></li>  <!--page 2 -->
+			<li><a href="#" onclick="return show('Page3','Page1');">Таймер</a></li>  <!--page 3 -->
+		</ul>	
+	</nav>	
+  </div>
+
+  <div id="Page2" style="display:none" >
+    <!-- Content of page 2 -->
+	
+	<style>
+			#my_maps {
+			    position:absolute;
+				width:900px;
+				height:600px;
+				margin-top:80px;
+  				margin-right: auto;
+				/*margin: 100px 510px 30px;*/
+				border:1px solid #606060;
+			}
+			
+			#p_prldr{
+			/*position: fixed;*/
+			left: 0;
+			top: 0;
+			right:0;
+			bottom:0;
+			background:rgb(62, 61, 61);
+			z-index: 30;}
+ 
+			.contpre small{font-size:25px;}
+			 
+			.contpre{
+			width: 250px;
+			height: 100px;
+			position: absolute;
+			left: 50%;top: 48%;
+			margin-left:-125px;
+			margin-top:-75px;
+			color:#fff;
+			font-size:40px;
+			letter-spacing:-2px;
+			text-align:center;
+			line-height:35px;}
+			 
+			#p_prldr .txt_anm {
+			position: absolute;
+			width: 41px;
+			height: 41px;
+			background: url(spinning-circles.svg) center center no-repeat;
+			background-size:41px;    
+			margin: -16px 0 0 -16px;}
+		</style>
+	
+		<div id="p_prldr">
+			<div class="contpre">
+				<span class="txt_anm"></span><br>
+					<small>Идет загрузка page2</small>
+			</div>
+		</div>
+
+		<div id="my_maps" ></div>
+		<!-- </div> -->
+		<script type="text/javascript">
+       
+        function initMap() {
+		var map;
+            map = new google.maps.Map(document.getElementById('my_maps'), {
+                center: {lat: 56.762531, lng: 37.138491},
+                zoom: 18
+            });
+			
+			var marker = new google.maps.Marker({
+						position: {lat: 56.762531, lng: 37.138491},
+						map: map,
+						title: 'Место проживания'
+			});
+        }
+    </script>
+	
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7wFCN-G6gcarMGhWTXHj4XITWfIJEWDY&callback=initMap"></script>
+	
+	<nav class="menu">	
+		<ul>
+			<li><a href="#" onclick="return show('Page1','Page2');">Резюме</a></li>  <!--  page 1 -->
+			<li><a href="#" >Карта</a></li>  <!--  PAGE2  -->
+			<li><a href="#" onclick="return show('Page3','Page2');">Таймер</a></li> <!--  page 3  -->
+		</ul>	
+	</nav>
+  </div>
+  
+  <div id="Page3" style="display:none">
+    <!-- Content of page 2 -->
+	
+			<style>
+		 .txt-time {
+		  position:absolute;
+		  width: 800px;
+		  height:600px;
+		  margin-top:80px;
+  		  margin-right: auto;
+		  /*margin: 100px 510px 30px;*/
+		  padding:1em 3em 1em 3em;
+		background: rgba(34,34,34,.2);
+		
+		}
+		.txt-time span {
+		  font-family: 'Times New Roman', sans-serif;
+		  font-weight: bold;
+		  font-size:35px;
+		  text-transform: uppercase;
+		  letter-spacing: 2px;
+		
+		color:#696969;
+		
+		}
+		
+
+		</style>
+	
+	<div class="txt-time">
+		<form>
+			<h2 style="text-align:center; color:#696969;">Вы находитесь на странице 3<br><br><br>
+				<!-- <input type="text" size="20" name="timespent" onfocus="this.blur()" class="time"> -->
+				<span id="is_times"></span>
+			</h2>
+		</form>
+	</div>
+		<nav class="menu">
+			<ul>
+				<li><a href="#" onclick="return show('Page1','Page3');">Резюме</a></li> <!--  page 1 -->
+				<li><a href="#" onclick="return show('Page2','Page3');">Карта</a></li> <!--   page 2 -->
+				<li><a href="#" >Таймер</a></li>  <!--    PAGE3 -->
+			</ul>	
+		</nav>
+  </div>
+  </nav>
+ </body>
+</html>
