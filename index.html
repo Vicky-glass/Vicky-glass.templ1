@@ -47,7 +47,7 @@ function show(shown, hidden) {
 			if (myHours < 10) myHours = "0" + myHours;
 			if (myMin < 10) myMin = "0" + myMin;
 			if (mySecMin < 10) mySecMin = "0" + mySecMin;
-		document.getElementById("is_times").innerHTML=myHours + ":" + myMin + ":" + mySecMin;
+		document.getElementById("is_times").innerHTML=myHours + " час." + myMin + " мин." + mySecMin + " сек.";
 		window.setTimeout('getSecs()',1000); }
 		// -->
 		</script>
@@ -206,7 +206,7 @@ function show(shown, hidden) {
 		  font-family: 'Times New Roman', sans-serif;
 		  font-weight: bold;
 		  font-size:35px;
-		  text-transform: uppercase;
+		  <!-- text-transform: uppercase; -->
 		  letter-spacing: 2px;
 		
 		color:#696969;
@@ -218,7 +218,7 @@ function show(shown, hidden) {
 	
 	<div class="txt-time">
 		<form>
-			<h2 style="text-align:center; color:#696969;">Вы находитесь на странице 3<br><br><br>
+			<h2 style="text-align:center; color:#696969;">Время нахождения на сайте<br><br><br>
 				<!-- <input type="text" size="20" name="timespent" onfocus="this.blur()" class="time"> -->
 				<span id="is_times"></span>
 			</h2>
