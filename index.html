@@ -54,7 +54,7 @@ function div_show(shown, hidden) {
 </head>
 <body onLoad = "window.setTimeout('getSecs()',1)">
  <div class="nav-menu">
-  <div id="rezume" >
+  <div id="rezume1" >
   
     <nav class="content">
 		<h2> Белозерова Виктория Михайловна</h2>
@@ -94,14 +94,14 @@ function div_show(shown, hidden) {
 	<nav class="menu">
 		<ul>
 			 <li><a href="#" >Резюме </a></li>  <!--PAGE1 -->
-			<li><a class="maps" href="#" onclick="return div_show('Page2','rezume');">Карта</a></li>  <!--page 2 -->
-			<li><a href="#" onclick="return div_show('Page3','rezume');">Таймер</a></li>  <!--page 3 -->
+			<li><a class="maps" href="#" onclick="return div_show('map2','rezume1');">Карта</a></li>  <!--page 2 -->
+			<li><a href="#" onclick="return div_show('time3','rezume');">Таймер</a></li>  <!--page 3 -->
 		</ul>	
 	</nav>	
   </div>
 
-  <div id="Page2" style="display:none" >
-    <!-- Content of page 2 -->
+  <div id="map2" style="display:none" >
+    
 
 	
 	<style>
@@ -179,17 +179,16 @@ function div_show(shown, hidden) {
 	
 	<nav class="menu">	
 		<ul>
-			<li><a href="#" onclick="return div_show('rezume','Page2');">Резюме</a></li>  <!--  page 1 -->
+			<li><a href="#" onclick="return div_show('rezume1','map2');">Резюме</a></li>  <!--  page 1 -->
 			<li><a class="maps" href="#" >Карта</a></li>  <!--  PAGE2  -->
-			<li><a href="#" onclick="return div_show('Page3','Page2');">Таймер</a></li> <!--  page 3  -->
+			<li><a href="#" onclick="return div_show('time3','map2');">Таймер</a></li> <!--  page 3  -->
 		</ul>	
 	</nav>
   </div>
   
  
-  <div id="Page3" style="display:none">
-    <!-- Content of page 2 -->
-	
+  <div id="time3" style="display:none">
+    	
 			<style>
 		 .txt-time {
 		  position:absolute;
@@ -226,8 +225,8 @@ function div_show(shown, hidden) {
 	</div>
 		<nav class="menu">
 			<ul>
-				<li><a href="#" onclick="return div_show('rezume','Page3');">Резюме</a></li> <!--  page 1 -->
-				<li><a class="maps" href="#" onclick="return div_show('Page2','Page3');">Карта</a></li> <!--   page 2 -->
+				<li><a href="#" onclick="return div_show('rezume1','time3');">Резюме</a></li> <!--  page 1 -->
+				<li><a class="maps" href="#" onclick="return div_show('map2','time3');">Карта</a></li> <!--   page 2 -->
 				<li><a href="#" >Таймер</a></li>  <!--    PAGE3 -->
 			</ul>	
 		</nav>
