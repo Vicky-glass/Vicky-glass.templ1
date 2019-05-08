@@ -7,7 +7,7 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>  
 
 <script>
-function show(shown, hidden) {
+function div_show(shown, hidden) {
   document.getElementById(shown).style.display='block';
   document.getElementById(hidden).style.display='none';
    return false;
@@ -94,8 +94,8 @@ function show(shown, hidden) {
 	<nav class="menu">
 		<ul>
 			 <li><a href="#" >Резюме </a></li>  <!--PAGE1 -->
-			<li><a class="maps" href="#" onclick="return show('Page2','Page1');">Карта</a></li>  <!--page 2 -->
-			<li><a href="#" onclick="return show('Page3','Page1');">Таймер</a></li>  <!--page 3 -->
+			<li><a class="maps" href="#" onclick="return div_show('Page2','Page1');">Карта</a></li>  <!--page 2 -->
+			<li><a href="#" onclick="return div_show('Page3','Page1');">Таймер</a></li>  <!--page 3 -->
 		</ul>	
 	</nav>	
   </div>
@@ -179,9 +179,9 @@ function show(shown, hidden) {
 	
 	<nav class="menu">	
 		<ul>
-			<li><a href="#" onclick="return show('Page1','Page2');">Резюме</a></li>  <!--  page 1 -->
+			<li><a href="#" onclick="return div_show('Page1','Page2');">Резюме</a></li>  <!--  page 1 -->
 			<li><a class="maps" href="#" >Карта</a></li>  <!--  PAGE2  -->
-			<li><a href="#" onclick="return show('Page3','Page2');">Таймер</a></li> <!--  page 3  -->
+			<li><a href="#" onclick="return div_show('Page3','Page2');">Таймер</a></li> <!--  page 3  -->
 		</ul>	
 	</nav>
   </div>
@@ -226,8 +226,8 @@ function show(shown, hidden) {
 	</div>
 		<nav class="menu">
 			<ul>
-				<li><a href="#" onclick="return show('Page1','Page3');">Резюме</a></li> <!--  page 1 -->
-				<li><a class="maps" href="#" onclick="return show('Page2','Page3');">Карта</a></li> <!--   page 2 -->
+				<li><a href="#" onclick="return div_show('Page1','Page3');">Резюме</a></li> <!--  page 1 -->
+				<li><a class="maps" href="#" onclick="return div_show('Page2','Page3');">Карта</a></li> <!--   page 2 -->
 				<li><a href="#" >Таймер</a></li>  <!--    PAGE3 -->
 			</ul>	
 		</nav>
